@@ -15,15 +15,16 @@ const data = [
   {
     date: "10th March'23",
     title: "Exploring Generative AI and Future",
-    speaker: [{
-      name: "Mohammad Arsalan",
-      social: "https://www.linkedin.com/in/sallu-mandya/",
-    }],
+    speaker: [
+      {
+        name: "Mohammad Arsalan",
+        social: "https://www.linkedin.com/in/sallu-mandya/",
+      },
+    ],
   },
   {
     date: "14th March'23",
     title: "Building with OpenAI",
-
   },
   {
     date: "16th March'23",
@@ -48,47 +49,57 @@ const data = [
   {
     date: "31st March'23",
     title: "Computer Vision using YoloV7",
-    speaker: [{
-      name: "Rishi More",
-      social: "https://www.linkedin.com/in/rishimore102/",
-    }, {
-      name: "Gitesh Kambli",
-      social: "https://www.linkedin.com/in/gitesh-kambli/",
-    }],
+    speaker: [
+      {
+        name: "Rishi More",
+        social: "https://www.linkedin.com/in/rishimore102/",
+      },
+      {
+        name: "Gitesh Kambli",
+        social: "https://www.linkedin.com/in/gitesh-kambli/",
+      },
+    ],
   },
   {
     date: "03rd April'23",
     title: "Transfer Learning",
-    speaker: [{
-      name: "Aritra Roy Gosthipaty",
-      social: "https://www.linkedin.com/in/arig23498/",
-    }],
+    speaker: [
+      {
+        name: "Aritra Gosthipaty",
+        social: "https://www.linkedin.com/in/arig23498/",
+      },
+    ],
   },
   {
     date: "06th April'23",
     title: "MLOps",
-    speaker: [{
-      name: "Rohit Ghumare",
-      social: "https://www.linkedin.com/in/rohit-ghumare/",
-    }],
+    speaker: [
+      {
+        name: "Rohit Ghumare",
+        social: "https://www.linkedin.com/in/rohit-ghumare/",
+      },
+    ],
   },
   {
     date: "08th April'23",
     title: "Lightning AI",
-    speaker: [{
-      name: "Aniket Maurya",
-      social: "https://www.linkedin.com/in/aniketmaurya/",
-    }],
+    speaker: [
+      {
+        name: "Aniket Maurya",
+        social: "https://www.linkedin.com/in/aniketmaurya/",
+      },
+    ],
   },
   {
     date: "10th April'23",
     title: "AI + Web3",
-    speaker: [{
-      name: "Sudalai Rajkumar",
-      social: "https://www.linkedin.com/in/sudalairajkumar/",
-    }],
+    speaker: [
+      {
+        name: "Sudalai Rajkumar",
+        social: "https://www.linkedin.com/in/sudalairajkumar/",
+      },
+    ],
   },
-  
 ];
 
 const EventTimeline = () => {
@@ -99,7 +110,7 @@ const EventTimeline = () => {
         <Timeline position="alternate" className="px-0 mt-4 space-y-4 ">
           {data.map((item) => (
             <TimelineItem className="timelineevent">
-              <TimelineOppositeContent className="invisible">
+              <TimelineOppositeContent className="hidden lg:block lg:invisible">
                 <span
                   className="bg-indigo-200  text-indigo-900 
                 px-2 lg:px-8 py-2 rounded-full lg:text-lg
@@ -122,25 +133,36 @@ const EventTimeline = () => {
                 </span>
                 <div
                   className="bg-indigo-600 text-white rounded-xl mt-4 
-                 p-4 lg:p-8"
+                 p-4 lg:p-8 max-w-full "
                 >
                   <h1 className="font-medium text-lg lg:text-2xl">
                     {item.title}
                   </h1>
-                  {item.description && <p className="font-normal mt-2" >{item.description}</p>}
-                  {item.speaker ? <span className="flex mt-2 lg:mt-4 gap-4 w-max ">
-                    Speaker:{" "}
-                    {item.speaker.map(s => (<a
-                      href={s.social}
-                      className="bg-indigo-500 w-max px-4 rounded-full 
+                  {item.description && (
+                    <p className="font-normal mt-2">{item.description}</p>
+                  )}
+                  {item.speaker ? (
+                    <span className="flex flex-wrap  mt-2 lg:mt-4 gap-4 w-52 md:w-max ">
+                      Speaker:{" "}
+                      {item.speaker.map((s) => (
+                        <a
+                          href={s.social}
+                          className="bg-indigo-500 w-max px-4 rounded-full 
                     flex items-center hover:bg-indigo-400 transition "
-                    >
-                      {s.name}
-                      <OpenInNewIcon className="h-4" />
-                    </a>))}
-                  </span> : 
-                  <span className="block italic mt-2 lg:mt-4" >Discussing with speakers</span>}
-                  <span className="block mt-4 italic font-light text-sm" >dates are tentative</span>
+                        >
+                          {s.name}
+                          <OpenInNewIcon className="h-4" />
+                        </a>
+                      ))}
+                    </span>
+                  ) : (
+                    <span className="block italic mt-2 lg:mt-4">
+                      Discussing with speakers
+                    </span>
+                  )}
+                  <span className="block mt-4 italic font-light text-sm">
+                    dates are tentative
+                  </span>
                 </div>
               </TimelineContent>
             </TimelineItem>
