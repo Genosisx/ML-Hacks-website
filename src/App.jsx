@@ -26,7 +26,7 @@ function App() {
         <Marquee gradient={false} speed={80} className="absolute top-[15%]">
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-orange-400 bg-opacity-30 text-orange-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-orange-400 bg-opacity-30 text-orange-400 px-4 rounded-full
           
           `}
             >
@@ -42,7 +42,7 @@ function App() {
         >
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-pink-400 bg-opacity-30 text-pink-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-pink-400 bg-opacity-30 text-pink-400 px-4 rounded-full
           
           `}
             >
@@ -53,7 +53,7 @@ function App() {
         <Marquee gradient={false} speed={80} className="absolute top-[25%]">
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-blue-400 bg-opacity-30 text-blue-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-blue-400 bg-opacity-30 text-blue-400 px-4 rounded-full
           
           `}
             >
@@ -69,7 +69,7 @@ function App() {
         >
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden text-9xl opacity-10 font-extrabold px-4 py-0 my-0
+              className={` overflow-x-hidden w-max text-9xl opacity-10 font-extrabold px-4 py-0 my-0
           
           `}
             >
@@ -80,7 +80,7 @@ function App() {
         <Marquee gradient={false} speed={80} className="absolute top-[45%]">
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-yellow-400 bg-opacity-30 text-yellow-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-yellow-400 bg-opacity-30 text-yellow-400 px-4 rounded-full
           
           `}
             >
@@ -96,7 +96,7 @@ function App() {
         >
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-purple-400 bg-opacity-30 text-purple-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-purple-400 bg-opacity-30 text-purple-400 px-4 rounded-full
           
           `}
             >
@@ -107,7 +107,7 @@ function App() {
         <Marquee gradient={false} speed={80} className=" top-[55%]">
           {[...Array(10).keys()].map((i, n) => (
             <p
-              className={` overflow-x-hidden mx-3 bg-green-400 bg-opacity-30 text-green-400 px-4 rounded-full
+              className={` overflow-x-hidden w-max mx-3 bg-green-400 bg-opacity-30 text-green-400 px-4 rounded-full
           
           `}
             >
